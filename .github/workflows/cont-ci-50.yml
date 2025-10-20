@@ -14,10 +14,13 @@ on:
           - PRD
 
 jobs:
-  build:
+  # build:
     # runs-on: ubuntu-latest   # Github-hosted
     # runs-on: self-hosted           # VM
-    runs-on: edu12-arc-runner-set  # AKS
+    # runs-on: edu12-arc-runner-set  # AKS
+  Explore-GitHub-Actions:
+    # You need to use the INSTALLATION_NAME from the previous step
+    runs-on: edu12-arc-runner-set
 
     env:
       IMAGE_NAME: ${{ vars.ACR_NAME }}.azurecr.io/${{ vars.EDUUSERID }}/samplejava
